@@ -21,14 +21,15 @@
 bin/
 build/
 develop-eggs/
-downloads/
+downloads/*
 eggs/
 fake-eggs/
 parts/
 dist/
 var/
 
-
-
 # OSX
 .DS_Store
+
+# Don't ignore those files
+!downloads/README.txt
