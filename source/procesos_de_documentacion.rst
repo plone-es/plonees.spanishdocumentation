@@ -9,18 +9,18 @@ Procesos de documentación
 Obtener y compilar la documentación
 ===================================
 
-El almacenamiento de este material está disponible en un repositorio Git 
-`collective.spanishdocumentation`_ en la cuenta de `collective`_ en GitHub.com. 
-Si usted tiene una credenciales en este servidor y desea convertirse en 
+El almacenamiento de este material está disponible en un repositorio Git
+`collective.spanishdocumentation`_ en la cuenta de `collective`_ en GitHub.com.
+Si usted tiene una credenciales en este servidor y desea convertirse en
 un colaborador ejecute el siguiente comando:
 
 .. code-block:: sh
 
   $ git clone git@github.com:collective/collective.spanishdocumentation.git collective.spanishdocumentation
 
-Si usted no tiene las credenciales de acceso al repositorio Git 
-`collective.spanishdocumentation`_ en la cuenta de `collective`_ 
-en GitHub.com o simplemente solo desea obtener y compilar esta 
+Si usted no tiene las credenciales de acceso al repositorio Git
+`collective.spanishdocumentation`_ en la cuenta de `collective`_
+en GitHub.com o simplemente solo desea obtener y compilar esta
 documentación ejecute el siguiente comando:
 
 .. code-block:: sh
@@ -46,7 +46,7 @@ Ahora puede generar la documentación de HTML, con los siguiente comandos:
   (sphinx)$ ./bin/buildout -vN
   (sphinx)$ ./bin/sphinx
 
-Ahora se puede abrir ``collective.spanishdocumentation/build/html/index.html`` desde 
+Ahora se puede abrir ``collective.spanishdocumentation/build/html/index.html`` desde
 su navegador Web favorito.
 
 Para obtener la documentación en PDF:
@@ -57,7 +57,7 @@ Para obtener la documentación en PDF:
   (sphinx)$ make latex
   (sphinx)$ make latexpdf
 
-Ahora se puede abrir ``collective.spanishdocumentation/sphinx/build/latex/DocumentacionEspanolPlone.pdf`` 
+Ahora se puede abrir ``collective.spanishdocumentation/sphinx/build/latex/DocumentacionEspanolPlone.pdf``
 con sus programas de visor de PDF favorito (Evince, Acrobat Reader, ...)
 
 
@@ -70,8 +70,8 @@ En primer lugar, debe aprender los `fundamentos de Sphinx`_ que es un reStructur
 Codificación de caracteres
 ==========================
 
-Su editor debe codificar el texto en **utf-8** si le gusta lo que está leyendo. 
-Si su editor de texto favorito no reconoce esta codificación 
+Su editor debe codificar el texto en **utf-8** si le gusta lo que está leyendo.
+Si su editor de texto favorito no reconoce esta codificación
 (en la actualidad, eso es bien extraño), entonces cambie de editor de texto.
 
 .. admonition::
@@ -125,7 +125,7 @@ editores. Para mantener la coherencia nosotros adoptamos la siguiente convenció
   Sección del nivel 7
   +++++++++++++++++++
 
-No es necesario ni deseable ir más allá del nivel 4. Cuando la generación del 
+No es necesario ni deseable ir más allá del nivel 4. Cuando la generación del
 documento allá completado, el nivel de las secciones básicas de un archivo
 depende del nivel de anidamiento del archivo en la estructura general de
 documento. Para generar el HTML, no es un problema, pero en LaTeX limita
@@ -146,7 +146,7 @@ unitarias no deben mostrar ningún error, compruebe en primer lugar:
 Imágenes
 ========
 
-Aparte de las capturas de pantalla - ¡Uy, lo siento - las capturas de pantalla!, 
+Aparte de las capturas de pantalla - ¡Uy, lo siento - las capturas de pantalla!,
 las imágenes Sphinx se inserta en el documento debe ir acompañada de su versión
 "Fuente" en un formato público interoperables, y para que el editor pueda abrir
 el archivo fuente que este disponible. Las imágenes deben estar preferentemente en el formato
@@ -188,9 +188,71 @@ Algunas de las herramientas recomendadas
 
 Emacs : usted puede agregar a emacs el módulo `rst.el
 <http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el>`_
-que añade un par de comandos y la sintaxis de la documentación a los escritores 
+que añade un par de comandos y la sintaxis de la documentación a los escritores
 simpatizantes de Sphinx y reStructuredText.
 
+Subir la documentación a un sitio web Plone
+===========================================
+
+Esta documentación se puede subir a un sitio web Plone gracias al
+programa `funnelweb`_. A continuación se demuestra como hacerlo en
+nuestro entorno de desarrollo.
+
+Antes de todo hay que iniciar el servidor y crear un sitio Plone.
+
+.. code-block:: sh
+
+  (sphinx)$ cd collective.spanishdocumentation/
+  (sphinx)$ ./bin/instance start
+
+1. Navegue a su instancia visitando http://localhost:8080 en su navegador web.
+   Si usted estableció otro puerto, use ese en vez del *8080*.
+2. Haga clic en "Create a new Plone site" (Crear un nuevo sitio Plone) e
+   introduzca su información de inicio de sesión para comenzar a usar Plone.
+3. Introduzca la información requerida, en nuestro caso usaremos el nombre **Plone**,
+   luego envíe el formulario para finalizar la creación de su sitio.
+4. Usted puede ahora encontrar su sitio en http://localhost:8080/Plone.
+5. Ahora debe agregar una nueva carpeta llamada *Documentación* en la raiz del sitio
+   en la que añadiremos la documentación en html creada con Sphinx.
+
+El sitio Plone está ahora listo para recibir la documentación, para hacerlo
+simplemente hay que ejecutar el script ``toplone``.
+
+.. code-block:: sh
+
+  (sphinx)$ ./bin/toplone
+
+Configuración de funnelweb
+--------------------------
+
+Es posible configurar el programa `funnelweb`_ editando el
+fichero ``pipeline.cfg``.
+
+Por ejemplo, para subir la documentación en otra carpeta llamada
+*Manuales* o para usar un nombre de usuario y contraseña diferentes,
+puede cambiar la opción de configuración ``ploneupload:target``
+editando el fichero ``pipeline.cfg`` de esta manera::
+
+    # Upload to Plone Development Server
+    [ploneupload]
+    target=http://administrador:mitesoro@localhost:8080/Plone/manuales
+
+También puede resultar utíl hacer unas pruebas subiendo sólo algunas
+paginas en vez de toda la documentación, por eso hay que descomentar
+la opción ``crawler:max``::
+
+    [crawler]
+    max=10
+
+Puede encontrar más información acerca de la configuración de funnelweb
+en la pagina http://pypi.python.org/pypi/funnelweb.
+
+.. note::
+
+    Al cambiar el fichero ``pipeline.cfg`` NO es necesario volver
+    ejecutar el ``buildout``, de hacerlo se perderían eventuales
+    modificaciones ya que buildout genera el fichero de
+    configuración a partir de la plantilla ``pipeline.in``.
 
 FAQ
 ===
@@ -199,10 +261,11 @@ FAQ
 no se actualiza cuando compilo el documento.
 
 **Respuesta :** El índice de Sphinx es a veces es desorientado y la gestión de la dependencia
-a veces, mejor. Por lo tanto, todo se debe reiniciar ejecutando el comando ``make clean`` 
+a veces, mejor. Por lo tanto, todo se debe reiniciar ejecutando el comando ``make clean``
 dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
 
 
+.. links:
 .. _collective.spanishdocumentation: https://github.com/collective/collective.spanishdocumentation
 .. _collective: https://github.com/collective/
 .. _fundamentos de Sphinx: http://sphinx.pocoo.org/contents.html
@@ -212,3 +275,4 @@ dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
 .. _Zope documentation: http://docs.zope.org/zope2/index.html
 .. _Plone Developer Documentation: http://collective-docs.plone.org/
 .. _D\:YAML documentation: http://dyaml.alwaysdata.net/static/html/doc_0.4/index.html
+.. _`funnelweb`: http://plone.org/products/funnelweb/
