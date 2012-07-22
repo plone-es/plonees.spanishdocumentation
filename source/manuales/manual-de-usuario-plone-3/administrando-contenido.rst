@@ -1009,6 +1009,6 @@ Créditos de esta sección
 ------------------------
 
 .. sectionauthor::  Hugo Salgado <hsalgado@vulcano.cl>
-.. codeauthor:: 
-    Luis Sumoza <lsumoza@gmail.com>, 
-    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 
+.. codeauthor::
+    Luis Sumoza <lsumoza@gmail.com>,
+    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>,

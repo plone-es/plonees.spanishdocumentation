@@ -3,7 +3,7 @@
 Manual de Usuario de Plone 3
 ============================
 
-Un manual para administradores y creadores de contenido en Plone.
+Un manual para gestores y creadores de contenido en Plone.
 
 .. toctree::
    :maxdepth: 2
@@ -17,8 +17,3 @@ Un manual para administradores y creadores de contenido en Plone.
    proximos-pasos.rst
    creditos.rst
 
-Índices y tablas
-================
-
-* :ref:`genindex`
-* :ref:`search`

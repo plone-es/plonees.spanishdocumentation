@@ -21,7 +21,7 @@ carpetas, imágenes, paginas, etc. y cualquier tipo de contenido especializado
 tiene opciones para controlar los Estados de Publicación:
 
 .. image:: images/statemenu1.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -63,7 +63,7 @@ Privado con la opción *Echar atrás*, si se requiere. La opciones del menú
 Estado cambiaran consecuentemente:
 
 .. image:: images/statemenu2.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -90,14 +90,14 @@ contenido.
 Este menú *Estado* tiene la opción *Avanzado*...:
 
 .. image:: images/copy_of_statemenu1.png
-  :alt: 
+  :alt:
   :align: center
 
 
 El cual muestra el panel de *Avanzado*:
 
 .. image:: images/stateadvanced.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -153,7 +153,7 @@ panel *Retirar* y *Echar atrás* para "privatizar" el elemento,
 estableciéndolo a *borrador publico* o luego para Estado *Privado*.
 
 .. image:: images/lightscameraaction.png
-  :alt: 
+  :alt:
   :align: center
 
 Ver un vídeo sobre como `controlar el Estado de Publicación`_ en Plone 2
@@ -196,7 +196,7 @@ periodistas crearan historias y las enviaran para su respectiva revisión y
 aprobación:
 
 .. image:: images/workflowsteps.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -248,7 +248,7 @@ contenido. Antes de seguir junto a Jane, rápidamente observemos lo que
 actualmente ve George cuando inicia sesión en este sitio Plone:
 
 .. image:: images/02b.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -263,7 +263,7 @@ contenido a la carpeta Documentation.
 Jane navega a la carpeta Documentation y hace clic en la pestaña Compartir:
 
 .. image:: images/03_002.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -303,7 +303,7 @@ carpeta Documention, para que pueda agregar contenido a la carpeta. Jane lo
 busca por su nombre:
 
 .. image:: images/04.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -312,7 +312,7 @@ Documentation. Ella le dará el permiso "Puede agregar" y luego hará clic en
 "Guardar"
 
 .. image:: images/05_002.png
-  :alt: 
+  :alt:
   :align: center
 
  ¡Eso es todo! Ahora veamos como ve George el sitio.
@@ -325,7 +325,7 @@ Por ejemplo, George puede hacer clic en la pestaña *Inicio* para refrescar la
 pagina y podrá ver la carpeta Documentation
 
 .. image:: images/06.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -335,7 +335,7 @@ los tipos de contenidos disponibles en esta, como se muestra en el menú
 *Agregar elemento*:
 
 .. image:: images/07.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -343,7 +343,7 @@ George quiere revisar lo que Jane ha creado ya, así que hace clic en el
 enlace "Project Overview" y revisa:
 
 .. image:: images/07b.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -355,7 +355,7 @@ George agrega una Pagina llamada "Widget Installation" y crea el contenido
 para esa Pagina. Cuando finalice el la guarda:
 
 .. image:: images/08.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -364,7 +364,7 @@ Documentation y puede ver George realmente ha estado ocupado. Ella hace clic
 en la Pagina "Widget Installation" para revisarla detenidamente:
 
 .. image:: images/09.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -382,7 +382,7 @@ Documentation. **Jane ha publicado la carpeta Documentation y varias de sus
 paginas**
 
 .. image:: images/09b.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -456,8 +456,8 @@ permiso de editar. ¡Los permisos son muy específicos en Plone!
 Créditos de esta sección
 ------------------------
 
-.. sectionauthor:: Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 
-.. codeauthor:: 
-    Luis Sumoza <lsumoza@gmail.com>, 
+.. sectionauthor:: Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>,
+.. codeauthor::
+    Luis Sumoza <lsumoza@gmail.com>,
     Victor Terán <vteran93@yahoo.es>
 

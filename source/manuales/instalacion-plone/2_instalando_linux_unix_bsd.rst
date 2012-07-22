@@ -1,215 +1,5 @@
 .. -*- coding: utf-8 -*-
 
-.. _instalando_plone:
-
-====================
-Instalación de Plone
-====================
-
-:Traductor(es): Luis Sumoza, Leonardo J. Caballero G.
-:Correo(s): lsumoza@gmail.com, leonardocaballero@gmail.com
-:Lanzamiento: |version|
-:Fecha: |today|
-
-En esta es una traducción del articulo llamado `Installing Plone`_ donde se ofrece 
-la información básica para la instalación de Plone en Windows, OS X, Linux, BSD
-(distribución de software Berkeley) y prácticamente cualquier otra
-plataforma.
-
-.. contents :: :local:
-
-.. _1_guia_instalacion:
-
-1. Guía rápida de Instalación
-=============================
-
-Como instalar Plone, paso a paso. Versión corta
-
-
-Linux/BSD
----------
-
-
-Requisitos previos
-..................
-
-Antes de instalar Plone en Linux, BSD, o cualquier otro sistema operativo
-basado en Unix, debería asegurarse que tiene los siguientes paquetes
-instalados:
-
--   Compilador gcc, a C
-
--   Software g++, extensión de gcc para compilar código C++
-
--   GNU make, una herramienta de compilación
-
--   GNU tar, paquete para crear archivos tar
-
--   Paquetes para descomprimir: bzip2 y gzip
-
-Los siguientes paquetes también son recomendados, pero no son necesarios para
-construir Plone
-
--   libssl, le permite usar TSL como su servidor de correo electrónico.
-
--   readline, un paquete GNU que incrementa la capacidad de las
-    aplicaciones para editar los comandos de Terminal.
-
-
-Obtener el instalador de Plone
-..............................
-
-El instalador para Linux/BSD/Unix, denominado Unified Installer (Instalador
-Unificado), se puede descargar de `esta pagina`_ en el sitio web de Plone.
-
-1.  Haga clic en *Download Plone* (descargar Plone), y este le llevara a
-    la pagina que contiene los distintos instaladores de Plone.
-2.  Haga clic en el enlace Unified Installer para comenzar la descarga de
-    Plone.
-3.  Después que la descarga haya finalizado, abra la Terminal y cambie
-    los directorios donde el archivo del instalador que usted descargo esta
-    localizado.
-4.  Descomprima el instalador escribiendo ``tar xzf InstallerName``, donde
-    InstallerName es el nombre del instalador de Plone que usted descargo.
-5.  En su Terminal de comandos introduzca el directorio de la carpeta que
-    usted acaba de extraer.
-
-
-Configurando su Instalación Plone
-.................................
-
-Lo primero que debe decidir al momento de instalar Plone es si quiere una
-instalación ZEO o una instalación autónoma. Probablemente debería escoger ZEO
-si va a usar Plone para cualquier producción. Sin embargo, si simplemente
-esta probando Plone o lo va a usar para formación, la opción autónoma se
-adecuaría mejor. Para un discusión mas profunda de este tema lea la 
-sección llamada :ref:`¿Ser ZEO o no ser ZEO? <ser-zeo-o-no-ser-zeo>`.
-
-Para comenzar la instalación escriba ``./install.sh method`` donde *method* es
-"standalone" (autónoma) o "zeo". Si desea instalar Plone en modo servidor
-escriba ``sudo ./install.sh method`` o ejecute el script de instalación
-como root de alguna otra manera. una lista completa de opciones de lineas de
-comando la puede encontrar `aquí`_.
-
-
-Últimos pasos
-.............
-
-Cercano del final de la instalación, el instalador debió haber mostrado su
-nombre de usuario y contraseña para su instalación Plone en la Terminal. Si
-tiene problemas encontrándolos, estos están también listados en un archivo de
-texto llamado ``adminPassword.txt`` (el cual se puede encontrar en la carpeta
-``zinstance`` de la instalación de Plone).
-
-Para iniciar Plone:
-
-1.  Haga un "cd" al directorio de su instalación Plone.
-2.  Entre en su carpeta zinstance.
-3.  Ejecute ``./bin/plonectl start``. (El puerto que usa Plone se puede
-    ajustar en buildout.cfg para luego ejecutar ``./bin/buildout``).
-4.  Navegue a su instancia visitando http://localhost:8080 en su
-    navegador web. Si usted estableció otro puerto, use ese en vez del
-    *8080*.
-5.  Haga clic en "Create a new Plone site" (Crear un nuevo sitio Plone) e
-    introduzca su información de inicio de sesión para comenzar a usar Plone.
-    Introduzca la información requerida y luego envié el formulario para
-    finalizar la creación de su sitio. Usted puede encontrar su sitio en
-    http://localhost:8080/*SiteName*, donde **SiteName** es la identificación
-    de su sitio Plone.
-
-Para detener el proceso Plone ejecute ``./bin/plonectl stop``. ¡Diviértase
-usando Plone!
-
-
-OS X
-----
-
-Si usted quiere usar Plone en un escritorio Mac, el instalador binario OS X
-es una buena opción. Este proporciona el instalador para OS X y contiene un
-controlador visual. Sin embargo, ya que provee binarios pre-compilados, es
-muy difícil agregar nuevos componentes que requieran construcciones binarias.
-Si usted tiene la necesidad realizar esa acción, pues entonces agregue XCode
-a su sistema y use el instalador Unificado.
-
-
-MS Windows (2000, 2003, XP, Vista, 7)
--------------------------------------
-
-
-Obtener Plone
-.............
-
-Puede descargar Plone para Windows de `esta pagina`_.
-
-1.  Haga clic en el botón **Download Plone** (Descargar Plone).
-2.  Haga clic en el enlace para el instalador de Windows y guárdelo en
-    una locación que sea fácil de recordar tal como su Escritorio.
-3.  Haga doble-clic en el instalador para iniciar el proceso de
-    instalación.
-
-
-Asistente de instalación de Plone
-.................................
-
-1.  Introduzca el directorio donde le gustaría instalar Plone. La mayoría
-    de personas están de acuerdo con la ubicación predeterminada. (Haga clic
-    en "Next" (Siguiente) al finalizar cada paso para continuar)
-2.  Introduzca el nombre de usuario y contraseña que desee para la cuenta
-    del administrador.
-3.  Revise las opciones de configuración actual.
-4.  Durante el proceso de instalación una barra mostrara que tan cerca
-    esta la instalación de completarse.  Marque las casillas de confirmación
-    para determinar si usted quiere agregar Plone como un servicio para que
-    se inicie automáticamente con el inicio de Windows. 
-    
-    .. note::
-        esto se puede cambiar en cualquier momento ejecutando ``bin\\instance.exe remove`` en su
-        directorio de instalación o si desea ejecutar Plone después de que la
-        instalación haya culminado.
-
-
-Iniciando Plone
-...............
-
-Si usted decidió no hacer de Plone un servicio, usted lo puede iniciar y
-detener a través del directorio de Plone en su linea de comandos y a
-continuación ejecutar:
-
-.. code-block:: sh
-
-    bin/instance.exe fg
-
-o mediante el uso del Controlador GUI (interfaz gráfica de usuario) de Plone.
-
-El Controlador de Plone se puede encontrar en su menú de Inicio -> Todos los
-programas -> Plone -> Plone Controller. Este se usa para modificar la
-configuración de Plone, así como para iniciarlo o detenerlo. Ahora si usted
-decide hacer de Plone un servicio ejecute: 
-
-.. code-block:: sh
-
-    bin/instance.exe install
-
-Del mismo modo, para la desinstalación ejecute: 
-
-.. code-block:: sh
-
-    bin/instance.exe remove
-
-Una vez que usted haya iniciado una instancia de Plone, la puede ver
-visitando http://localhost:8080 en su navegador web. Si no se carga,
-asegúrese de que su Firewall no ha bloqueado el puerto TCP 8080.
-
-Haga clic en "Create a new Plone site" (Crear un nuevo sitio Plone) e
-introduzca su información de inicio de sesión para comenzar a usar Plone.
-Ingrese la información solicitada y luego envié el formulario para finalizar
-la creación de su sitio. Puede encontrar su sitio en
-http://localhost:8080/*SiteName*, donde **SiteName** es la identificación de su
-sitio Plone. ¡Diviértase con Plone!
-
-
-.. _2_instalando_linux_unix_bsd:
-
 2. Instalando en Linux / Unix / BSD
 ===================================
 
@@ -248,7 +38,7 @@ Unificado lo usara sin tener que modificarlo en las librerías de su sitio.
 En las listas de ayuda y canales IRC de Plone, la sugerencia "simplemente use
 el instalador Unificado", generalmente resulta en una de dos reacciones:
 
-    *Yo prefiero controlar la instalación de código fuente por mi mismo, y 
+    *Yo prefiero controlar la instalación de código fuente por mi mismo, y
     escoger todos los directorios de destinos;*
 
 No hay nada malo en eso, sin embargo, si usted utiliza los directorios de
@@ -300,7 +90,7 @@ Cambios en Plone 4
 -   El instalador ahora incluye un archivo de configuración
     *develop.cfg*, el cual puede usar después de la instalación inicial para
     configurar un entorno común de desarrollo. Para usarlo, ejecute buildout
-    con el comando: 
+    con el comando:
 
     .. code-block:: sh
 
@@ -316,7 +106,7 @@ Cambios en Plone 4
 Cambios en Plone 3.1
 ....................
 
--   El instalador Unificado ahora usa :ref:`buildout <que_es_zcbuildout>` para configurar las
+-   El instalador Unificado ahora usa buildout_ para configurar las
     instancias de Plone, lo que hace mas fácil controlar productos
     adicionales y actualizaciones de su instalación Plone.
 -   Es mucho mas sencillo agregar instancias adicionales de Zope/Plone a
@@ -327,7 +117,7 @@ Cambios en Plone 3.1
 -   Establecer un usuario aparte del "admin" y/o configurar la contraseña
     de su elección;
 -   El uso de una versión instalada de Python 2.4 (posiblemente una copia
-    del sistema). Se usa :ref:`virtualenv <que_es_virtualenv>` para aislar 
+    del sistema). Se usa virtualenv_ para aislar
     la instalación nueva y así su sistema de Python no es tocado.
 
 -   Si se requiere la instalación de libjpeg o libz, se hace localmente a
@@ -408,7 +198,7 @@ preocuparse por los derechos o identidades de los usuarios.
 .. _ser-zeo-o-no-ser-zeo:
 
 2.3. ¿Ser ZEO o no ser ZEO?
-============================
+----------------------------
 
 El instalador Unificado instalara Zope ya sea para ejecutarse en una
 configuración Cliente/Servidor o en una configuración autónoma. Aquí están
@@ -483,7 +273,7 @@ Luego vaya al nuevo directorio creado:
 .. code-block:: sh
 
     cd Plone-VERSION-UnifiedInstaller
-    
+
 .. note::
     *VERSION* - cambiara con cada versión.
 
@@ -523,11 +313,11 @@ errores y diagnósticos para que en el caso de que usted no pueda resolverlos
 por si mismo, pida ayuda en la `lista de correo de plone-setup`_ o en el canal
 `IRC #plone`_. Nosotros necesitaremos información precisa sobre su plataforma y
 toda la información de diagnostico posible para ayudarlo. Además asegúrese de
-revisar la sección :ref:`Notas de plataforma <28_notas_plataforma>` en el 
-archivo ``README.txt`` que viene con el instalador para ver si hay algún tipo 
+revisar la sección :ref:`Notas de plataforma <28_notas_plataforma>` en el
+archivo ``README.txt`` que viene con el instalador para ver si hay algún tipo
 de trabajo o requerimiento especial en relación a su plataforma.
 
-    El programa de instalación crea un archivo detallado de registro, llamado 
+    El programa de instalación crea un archivo detallado de registro, llamado
     ``install.log``, que puede ayudar al diagnostico de una instalación fallida.
 
 
@@ -606,8 +396,8 @@ root.
 .. glossary::
 
   nuevo_nombre_instancia
-    debería ser un nombre de directorio simple - y no un nombre de ruta completo. 
-    El nuevo directorio se creara como un nuevo subdirectorio de la instalación completa 
+    debería ser un nombre de directorio simple - y no un nombre de ruta completo.
+    El nuevo directorio se creara como un nuevo subdirectorio de la instalación completa
     y compartirá su respectivo Python y el cache de buildout.
 
 
@@ -642,7 +432,7 @@ Solo cambie el numero de puerto (8100); y no modifique la dirección IP.
 Constrúyalo
 ...........
 
-Guarde sus cambios y ejecute :ref:`buildout <que_es_zcbuildout>` para actualizar 
+Guarde sus cambios y ejecute buildout_ para actualizar
 todas las partes de la instalación:
 
 .. code-block:: sh
@@ -667,40 +457,40 @@ Puede agregar la siguientes opciones a su linea de comando ``install.sh`` para u
 control mas refinado de su instalación:
 
 --target=pathname
-    Úsela para especificar rutas de nivel superior para las instalaciones. 
+    Úsela para especificar rutas de nivel superior para las instalaciones.
     Las instancias de Plone y Python se construirán dentro de este directorio.
 
 --user=user-name
-    En una instalación root, define el usuario efectivo para ejecutar la instancia. 
+    En una instalación root, define el usuario efectivo para ejecutar la instancia.
     Por defecto es el usuario "plone". Ignorado para las instalaciones no-root.
 
 --with-python=/fullpathtopython2.x
     Si usted ya tiene una construcción Python adecuada para ejecutar Zope/Plone, lo puede especificar aquí.
-    :ref:`virtualenv <que_es_virtualenv>` se usara para crear un entorno aislado de Python para la instalación. 
-    La librería del sistema de su sitio no se tocara. Se requiere Python 2.4 para Plone 3.x, y Python 2.6 para Plone 4. 
-    Su Python debe satisfacer las necesidades de Plone, y el instalador pondrá a prueba el soporte para las 
+    virtualenv_ se usara para crear un entorno aislado de Python para la instalación.
+    La librería del sistema de su sitio no se tocara. Se requiere Python 2.4 para Plone 3.x, y Python 2.6 para Plone 4.
+    Su Python debe satisfacer las necesidades de Plone, y el instalador pondrá a prueba el soporte para las
     librerías zlib, *libssl* y xml antes de construir para ellas.
 
 --password=InstancePassword
     Si no se especifica, una contraseña aleatoria sera generada.
 
 --without-ssl
-    Las librerías de desarrollo SSL (generalmente OpenSSL) se necesitan al construir Python 
-    para que soporten SSL (protocolo de capa de conexión segura) y TLS (protocolo para seguridad 
-    de la capa de transporte). Sin ellas Plone no podrá utilizar TLS en SMTP (Protocolo Simple de 
-    Transferencia de Correo). El instalador Unificado habitualmente se detendrá si no puede encontrar 
-    el encabezado SSL y sus librerías. Use esta opción para indicarle al instalador que usted sabe 
+    Las librerías de desarrollo SSL (generalmente OpenSSL) se necesitan al construir Python
+    para que soporten SSL (protocolo de capa de conexión segura) y TLS (protocolo para seguridad
+    de la capa de transporte). Sin ellas Plone no podrá utilizar TLS en SMTP (Protocolo Simple de
+    Transferencia de Correo). El instalador Unificado habitualmente se detendrá si no puede encontrar
+    el encabezado SSL y sus librerías. Use esta opción para indicarle al instalador que usted sabe
     lo que esta haciendo y que desea continuar sin las SSL.
 
 --without-lxml
-    ``lxml``, un wrapper (empaquetador) de Python para ``libxml2`` y ``libxslt``, no es requerido para Plone 4.1. 
-    Pero se necesita por algunos programas populares adicionales como plone.app.theming. A menos que 
-    usted especifique esta opción, el instalador tratara de construir ``lxml`` con las librerías estáticas 
+    ``lxml``, un wrapper (empaquetador) de Python para ``libxml2`` y ``libxslt``, no es requerido para Plone 4.1.
+    Pero se necesita por algunos programas populares adicionales como plone.app.theming. A menos que
+    usted especifique esta opción, el instalador tratara de construir ``lxml`` con las librerías estáticas
     ``libxml2`` y ``libxslt``. Puede que esto no funcione en todas las plataformas.
 
---nobuildout 
-    Saltar la ejecución de ``bin/buildout``. Usted debería saber que esta haciendo. El uso principal para esta opción 
-    se refiere a cuando usted desea que el instalador Unificado junte todas las piezas, para luego activar su propio 
+--nobuildout
+    Saltar la ejecución de ``bin/buildout``. Usted debería saber que esta haciendo. El uso principal para esta opción
+    se refiere a cuando usted desea que el instalador Unificado junte todas las piezas, para luego activar su propio
     buildout.cfg.
 
 El instalador Unificado averiguara si usted tiene o no, las librerías ``libz``,
@@ -797,7 +587,7 @@ cambiar algunas lineas en ``install.sh``
 Instalando en Solaris 10 (SPARC)
 ................................
 
-*Publicado por Joni Barnoff el 5 de abril de 2008 07:31 PM* 
+*Publicado por Joni Barnoff el 5 de abril de 2008 07:31 PM*
 
 .. code-block:: sh
 
@@ -820,7 +610,7 @@ este ``install.sh`` se usa el shell básico Bourne (#!/bin/sh), lo que significa
 que algunos de los comandos que son parte del shell Bourne de Linux y que no
 están presentes en el shell Bourne de Solaris simplemente no funcionan. Cabe
 destacar que el interruptor e-(existe) no esta presente en el shell Bourne de
-Solaris: 
+Solaris:
 
 .. code-block:: sh
 
@@ -842,7 +632,7 @@ Además ``install.sh`` usa el comando shell ``whoami`` , el cual en Solaris se e
 
  (g) whoami - /usr/ucb/whoami
 
-2. Garantice que todas las Rutas anteriores se encuentren en la ruta del sistema: 
+2. Garantice que todas las Rutas anteriores se encuentren en la ruta del sistema:
 
 .. code-block:: sh
 
@@ -851,13 +641,13 @@ Además ``install.sh`` usa el comando shell ``whoami`` , el cual en Solaris se e
 
 (Si /usr/ccs/bin no es agregado, la compilación de Python fallara con "gmake:ar: Command not found".)
 
-3. Debido a que el interruptor -e no esta presente en el shell Bourne de Solaris, ``install.sh``, y todos los otros scripts, este se debe cambiar a bash: 
+3. Debido a que el interruptor -e no esta presente en el shell Bourne de Solaris, ``install.sh``, y todos los otros scripts, este se debe cambiar a bash:
 
 .. code-block:: sh
 
         #!/usr/bin/bash
 
-4. El script ``install.sh`` utiliza el comando shell ``which`` para localizar el software que necesita para la construcción. Para garantizar que las versiones correctas del software fueron utilizadas (en lugar de las predeterminadas de Solaris), ``install.sh`` fue modificado explícitamente para definir las locaciones de cada pieza del software: 
+4. El script ``install.sh`` utiliza el comando shell ``which`` para localizar el software que necesita para la construcción. Para garantizar que las versiones correctas del software fueron utilizadas (en lugar de las predeterminadas de Solaris), ``install.sh`` fue modificado explícitamente para definir las locaciones de cada pieza del software:
 
 .. code-block:: sh
 
@@ -869,7 +659,7 @@ Además ``install.sh`` usa el comando shell ``whoami`` , el cual en Solaris se e
         BUNZIP2=/usr/bin/bunzip2
 
 
-5. Durante la construcción se necesitan ambas librerías: "libssl" y "readline". Agréguelas a la ruta de la librería del sistema. 
+5. Durante la construcción se necesitan ambas librerías: "libssl" y "readline". Agréguelas a la ruta de la librería del sistema.
 
 .. code-block:: sh
 
@@ -882,7 +672,7 @@ Para mas información: `http://www.eng.ox.ac.uk/Plone/solaris/plone-installation
 Solaris 10 x86
 ..............
 
-*Publicado por Coopertino el 9 de Septiembre de 2008 02:03 PM* 
+*Publicado por Coopertino el 9 de Septiembre de 2008 02:03 PM*
 
 .. code-block:: sh
 
@@ -891,155 +681,22 @@ Solaris 10 x86
 
 La instalación se ejecuto sin problemas, después de estas dos modificaciones:
 
-En el script ``install.sh`` en la linea 1 
+En el script ``install.sh`` en la linea 1
 
 .. code-block:: sh
 
     from #! /bin/sh  --> #! /bin/bash
 
-En el script ``install.sh`` en la linea 81 
+En el script ``install.sh`` en la linea 81
 
 .. code-block:: sh
 
     from GNU_TAR=`which tar` --> GNU_TAR=`which gtar`
 
-.. _3_instlando_windows:
 
-3. Instalando en Windows
-========================
-
-¿Como preparar y ejecutar Plone en Windows?; no para desarrollo considerable.
-
-El instalador binario para Windows es la opción a escoger si quiere probar
-Plone en Windows o para ser el host de un sitio, pero no para desarrollo
-considerable. Si quiere elaborar un desarrollo considerable, revise `este
-documento`_.
-
-De lo contrario, continué leyendo estas instrucciones tomadas del sitio
-`Catapult Solutions`_.
-
-
-Descargue e instale Plone
--------------------------
-
-1.  Descargue el instalador de esta pagina contenida en plone.org:
-    `http://plone.org/products/plone`_.
-
-2.  Guárdelo en un sitio que pueda recordar, tal como su Escritorio.
-
-3.  Después que la descarga haya finalizado, haga doble clic en archivo
-    del instalador para ejecutarlo.
-
-4.  Encamínese por el asistente de instalación. Nunca instale Plone en la
-    misma carpeta que uso para instalar una versión vieja, siempre use una
-    nueva.
-
-5.  Escriba o copie la locación de la instalación, tal como esta
-    ``C:\\Program Files\\Plone``. Usted necesitara esto mas adelante.
-
-6.  Escriba el nombre de usuario y contraseña que ingrese en el
-    asistente. Ya que también necesitara esto después.
-
-7.  Aguarde mientras el instalador Extrae los archivos y crea la
-    instancia de Plone.
-
-
-Iniciando/Deteniendo Plone
---------------------------
-
-
-Usando el Controlador
-.....................
-
-Usted puede acceder al Controlador de Plone para Windows, mediante el botón
-de *Inicio > Todos los programas > Plone*. Con el controlador puede start/stop
-(iniciar/detener) el servidor (Zope) de Plone y revisar el estado.
-
-
-Usando la linea de comando
-..........................
-
-Después de que el instalador haya finalizado proceda a abrir una ventana de
-Símbolo de sistema (generalmente *Inicio > Todos los programas > Accesorios*).
-
-Vaya al directorio de instalación de Plone, aquel que escribió anteriormente.
-Ejemplo: 
-
-.. code-block:: sh
-
-    cd "C:\\Program Files\\Plone"
-
-Para iniciar la instancia de Plone por primera vez, introduzca el siguiente
-comando:
-
-.. code-block:: sh
-
-    bin\\instance.exe fg
-
-Esto iniciara Plone en modo de depuración. A su vez mostrara el numero de
-puerto por el cual Plone se esta ejecutando; por defecto es el puerto 8080.
-Usted sabrá que la instancia de Plone ha terminado la iniciación y esta listo
-cuando se muestre el siguiente mensaje en la terminal **"INFO Zope Ready to
-handle requests"** (Información Zope preparado para manejar solicitudes).
-
-Para detener Plone, simplemente use *CTRL-C* en su ventana de Símbolo de
-sistema.
-
-
-Iniciar Plone como un servicio
-------------------------------
-
-Si quisiera que Plone se inicie como un servicio al momento de iniciar su
-computadora necesitara efectuar un CD al directorio de su instalación, luego
-ingrese el siguiente comando en la ventana de Símbolo de sistema:
-``bin\\instance install``. Esta acción instalara un nuevo servicio que a su vez
-se mostrara en la Consola de Administración de Servicios. Estará listada
-como: "Zope instance at C:\\Program Files\\Plone\\parts\\instance.exe", por
-supuesto si hizo la instalación en ``C:\\Program Files\\Plone``.
-
-Luego de que el servicio ha sido instalado inmediatamente puede iniciar Plone
-escribiendo el siguiente comando en su venta de Símbolo de sistema :
-``bin\\instance.exe start``, o utilice el Controlador de Plone (visto
-anteriormente).
-
-En el caso de que quiera remover este servicio, use el comando CD al
-directorio de su instalación y luego ingrese lo siguiente: ``bin\\instance.exe remove``.
-
-
-Accediendo a Plone
-------------------
-
-Quizás tenga que transmitirle a su Firewall (cortafuegos) que abra el puerto
-8080, antes de que pueda acceder a la interfaz web de Plone.
-
-Abra un navegador web y vaya a http://localhost:8080/. Haga clic en el botón
-que contiene el texto "Create a new Plone site" (Crear un nuevo sitio Plone)
-Se le pedirá que introduzca el nombre de usuario y contraseña: aquellos que
-escribió anteriormente.
-
-Otórguele a su sitio una identificación como "Plone", y un titulo como "Mi
-sitio Plone". Además puede seleccionar el idioma del sitio y algunos
-productos adicionales para su instalación. Luego haga clic en el botón "Add
-Plone Site" (Agregar nuevo sitio Plone) cerca del final de la pagina. Tomara
-unos segundos crear su sitio Plone
-
-Después de que su sitio se haya creado puede acceder a el mediante esta URL:
-*http://localhost:8080/Plone*, donde "Plone" es la identificación de su
-sitio.
-
-Referencias
-===========
-
-- `Instalando Plone con el Instalador Unificado`_.
-- `Installing Plone`_.
-
-.. _esta pagina: http://plone.org/products
-.. _aquí: http://plone.org/documentation/kb/installing-plone-with-the-unified-installer/command-line-options
-.. _http://www.eng.ox.ac.uk/Plone/solaris/plone-installation: http://www.eng.ox.ac.uk/Plone/solaris/plone-installation
-.. _este documento: http://plone.org/documentation/kb/using-buildout-on-windows
-.. _Catapult Solutions: www.catapultsolutions.net
-.. _http://plone.org/products/plone: http://plone.org/products/plone
-.. _Instalando Plone con el Instalador Unificado : http://plone.org/countries/conosur/documentacion/instalando-plone-3-con-el-instalador-unificado
-.. _Installing Plone: http://plone.org/documentation/manual/installing-plone
+.. links:
 .. _lista de correo de plone-setup: http://plone.org/support/forums/setup
 .. _IRC #plone: http://webchat.freenode.net/?channels=plone
+.. _buildout : http://plone-spanish-docs.readthedocs.org/en/latest/buildout/replicacion_proyectos_python.html#que-es-zcbuildout
+.. _virtualenv: http://plone-spanish-docs.readthedocs.org/en/latest/python/creacion_entornos_virtuales.html#que-es-virtualenv
+

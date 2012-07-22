@@ -148,7 +148,7 @@ agregarle contenido. Además en cualquier momento se puede subir fotos,
 documentos, etc:
 
 .. image:: images/plone_donut.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -156,7 +156,7 @@ Luego que hace sus cambios y hace clic en "Guardar", la nueva versión de la
 pagina web se mostrara a cualquiera que visite el sitio:
 
 .. image:: images/plone_donut_full.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -580,7 +580,7 @@ Elizabeth Smith podrá ver luego de iniciar sesión y hacer clic en su nombre
 en la parte superior derecha para ir a su área personal:
 
 .. image:: images/dashboard.png
-  :alt: 
+  :alt:
   :align: center
 
 
@@ -592,7 +592,7 @@ vacío, porque aquí no hay contenido disponible para mostrar en los Portlets
 de este nuevo sitio web. Aquí están los Portlets por defecto:
 
 .. image:: images/dashboardedit.png
-  :alt: 
+  :alt:
   :align: center
 
 Usted ve los Portlets de *Noticias* y *Eventos* en la columna totalmente a la
@@ -622,6 +622,6 @@ Créditos de esta sección
 ------------------------
 
 .. sectionauthor:: Roberto Allende <rallende@menttes.com>
-.. codeauthor:: 
-    Luis Sumoza <lsumoza@gmail.com>, 
-    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 
+.. codeauthor::
+    Luis Sumoza <lsumoza@gmail.com>,
+    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>,

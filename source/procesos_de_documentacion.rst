@@ -9,23 +9,32 @@ Procesos de documentación
 Obtener y compilar la documentación
 ===================================
 
-El almacenamiento de este material está disponible en un repositorio Git
-`collective.spanishdocumentation`_ en la cuenta de `collective`_ en GitHub.com.
-Si usted tiene una credenciales en este servidor y desea convertirse en
+El almacenamiento de este material está disponible en el repositorio Git
+`collective.spanishdocumentation`_ de la cuenta `plone-es`_ en GitHub.com.
+
+Este repositorio recoge la documentación oficial de Plone en Español
+publicada en el sitio web `Plone.es`_. Tenga en cuenta que en la web
+`Plone.es`_ se publica solo una parte de la documentación disponible,
+puede encontrar toda la documentación que hasta el momento está traducida
+al Español en la pagina http://plone-spanish-docs.readthedocs.org/en/latest/index.html
+y su codigo fuente en el repositorio `collective/collective.spanishdocumentation`_
+de la cuenta `Plone collective`_ en GitHub.com.
+
+Si usted tiene unas credenciales en este servidor y desea convertirse en
 un colaborador ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ git clone git@github.com:collective/collective.spanishdocumentation.git collective.spanishdocumentation
+  $ git clone git@github.com:plone-es/collective.spanishdocumentation.git
 
 Si usted no tiene las credenciales de acceso al repositorio Git
-`collective.spanishdocumentation`_ en la cuenta de `collective`_
+`collective.spanishdocumentation`_ en la cuenta de `plone-es`_
 en GitHub.com o simplemente solo desea obtener y compilar esta
 documentación ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ git clone git://github.com/collective/collective.spanishdocumentation.git collective.spanishdocumentation
+  $ git clone git://github.com/plone-es/collective.spanishdocumentation.git
 
 Crear entorno virtual de Python para reconstruir este proyecto:
 
@@ -131,8 +140,8 @@ depende del nivel de anidamiento del archivo en la estructura general de
 documento. Para generar el HTML, no es un problema, pero en LaTeX limita
 la superposición de las secciones a 6 niveles.
 
-Contribuciones SVN
-==================
+Contribuciones
+==============
 
 Wow, estás contento con tu excelente trabajo. Y le gustaría compartirlo con
 todo el mundo. Al igual que cuando "contribuidor" de código fuente, las pruebas
@@ -266,13 +275,17 @@ dentro del directorio ``collective.spanishdocumentation/sphinx/build/``.
 
 
 .. links:
-.. _collective.spanishdocumentation: https://github.com/collective/collective.spanishdocumentation
-.. _collective: https://github.com/collective/
+.. _collective.spanishdocumentation: https://github.com/plone-es/collective.spanishdocumentation
+.. _plone-es: https://github.com/plone-es
+.. _`Plone.es`: http://plone.es/documentacion
+.. _`collective/collective.spanishdocumentation`: https://github.com/collective/collective.spanishdocumentation
+.. _`Plone collective`: https://github.com/collective
 .. _fundamentos de Sphinx: http://sphinx.pocoo.org/contents.html
 .. _Graphviz: http://www.graphviz.org/
-.. _rst.el: http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el
 .. _Python documentation: http://docs.python.org/
 .. _Zope documentation: http://docs.zope.org/zope2/index.html
 .. _Plone Developer Documentation: http://collective-docs.plone.org/
 .. _D\:YAML documentation: http://dyaml.alwaysdata.net/static/html/doc_0.4/index.html
+.. _rst.el: http://svn.berlios.de/svnroot/repos/docutils/trunk/docutils/tools/editors/emacs/rst.el
 .. _`funnelweb`: http://plone.org/products/funnelweb/
+

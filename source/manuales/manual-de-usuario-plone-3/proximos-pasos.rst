@@ -285,6 +285,6 @@ Créditos de esta sección
 ------------------------
 
 .. sectionauthor:: Israel Saeta Pérez <dukebody@gmail.com>, José Subero <arawako@gmail.com>
-.. codeauthor:: 
-    Luis Sumoza <lsumoza@gmail.com>, 
-    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 
+.. codeauthor::
+    Luis Sumoza <lsumoza@gmail.com>,
+    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>,

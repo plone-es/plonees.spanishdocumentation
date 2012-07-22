@@ -233,7 +233,7 @@ las partes que las componen: ::
                              ^
                              una carpeta llamada Personal
                                        ^
-                                       una carpeta llamada Sally    
+                                       una carpeta llamada Sally
                                             ^
                                             una carpeta llamada Bio
 
@@ -363,7 +363,7 @@ ve es el texto en negrita - Plone se encarga de la parte HTML.
 
 La gente generalmente se siente cómoda con la características WYSIWYG de los
 procesadores de texto típicos. Nosotros describiremos esto aquí. Su
-administrador del sitio también puede habilitar el tan llamado `lenguaje de marcado`_ 
+administrador del sitio también puede habilitar el tan llamado `lenguaje de marcado`_
 para su sitio.
 
 .. image:: images/lights-camera-action_002.png
@@ -1198,6 +1198,6 @@ Créditos de esta sección
 ------------------------
 
 .. sectionauthor:: Emanuel Sartor <emanuel@menttes.com>
-.. codeauthor:: 
-    Luis Sumoza <lsumoza@gmail.com>, 
-    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 
+.. codeauthor::
+    Luis Sumoza <lsumoza@gmail.com>,
+    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>,

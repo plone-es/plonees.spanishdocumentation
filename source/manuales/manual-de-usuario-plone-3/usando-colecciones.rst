@@ -593,6 +593,6 @@ Créditos de esta sección
 ------------------------
 
 .. sectionauthor:: Carlos de la Guardia <carlos.delaguardia@gmail.com>
-.. codeauthor:: 
-    Luis Sumoza <lsumoza@gmail.com>, 
-    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>, 
+.. codeauthor::
+    Luis Sumoza <lsumoza@gmail.com>,
+    Leonardo J. Caballero G. <lcaballero@cenditel.gob.ve>,
