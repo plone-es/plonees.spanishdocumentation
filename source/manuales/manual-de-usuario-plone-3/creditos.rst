@@ -19,8 +19,8 @@ Traducción de este manual fue patrocinada por:
     * `Plone ConoSur <http://plone.org/countries/conosur/>`_.
 
     * `Plone Venezuela <http://plone.org/countries/ve/>`_.
-
-    * `Fundación Cenditel <http://www.cenditel.gob.ver/>`_.
+    
+    * `Fundación Cenditel <http://www.cenditel.gob.ve/>`_.
 
 
 8.1 Créditos originales
